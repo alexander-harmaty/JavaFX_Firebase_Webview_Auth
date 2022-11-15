@@ -30,7 +30,7 @@ public class SigninController {
             String user = textField_user.getText();
             String pass = textField_pass.getText();
             
-            currentUser = App.fauth.getUser(user);
+            currentUser = FirebaseAuth.getInstance().getUser(user);
             App.setRoot("AccessFBView.fxml");
             
         } catch (FirebaseAuthException | IllegalArgumentException ex) {
